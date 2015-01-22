@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e0r-QB-jiD">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Local Videos-->
+        <scene sceneID="Q0o-WR-EWN">
+            <objects>
+                <tableViewController id="UnZ-dx-2b0" customClass="LocalVideosTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="sR2-gO-7OR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AssetCell" textLabel="Rqd-DF-KxT" imageView="494-UX-R4g" rowHeight="60" style="IBUITableViewCellStyleDefault" id="m4Y-n7-DCe">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m4Y-n7-DCe" id="CBg-A6-bUK">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="8" id="Rqd-DF-KxT">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Placeholder" id="494-UX-R4g">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UnZ-dx-2b0" id="uFI-ip-k3X"/>
+                            <outlet property="delegate" destination="UnZ-dx-2b0" id="Zoq-Dr-nmV"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Local Videos" id="azz-7u-fpR"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbI-us-dhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573.5" y="954"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="eFm-m8-pY4">
+            <objects>
+                <viewController id="Kbv-Xd-BcP" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AG7-dU-lm2"/>
+                        <viewControllerLayoutGuide type="bottom" id="H5J-PZ-5zv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hPB-3a-tr0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-bo-W3L">
+                                <rect key="frame" x="40" y="20" width="520" height="520"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSa-Ol-wdi">
+                                        <rect key="frame" x="8" y="8" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TzZ-uD-6n8"/>
+                                            <constraint firstAttribute="width" constant="90" id="rcw-7x-mbn"/>
+                                        </constraints>
+                                        <state key="normal" title="Flip Camera">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="TzZ-uD-6n8"/>
+                                                <exclude reference="rcw-7x-mbn"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="TzZ-uD-6n8"/>
+                                                <include reference="rcw-7x-mbn"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="handleFlipButton:" destination="Kbv-Xd-BcP" eventType="touchUpInside" id="c3T-LO-YfN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="PSa-Ol-wdi" firstAttribute="leading" secondItem="EQH-bo-W3L" secondAttribute="leading" constant="8" id="1Os-Hd-hMy"/>
+                                    <constraint firstAttribute="width" secondItem="EQH-bo-W3L" secondAttribute="height" multiplier="1:1" id="4xV-rL-F5p"/>
+                                    <constraint firstItem="PSa-Ol-wdi" firstAttribute="top" secondItem="EQH-bo-W3L" secondAttribute="top" constant="8" id="aGR-FL-zCY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4xV-rL-F5p"/>
+                                        <exclude reference="1Os-Hd-hMy"/>
+                                        <exclude reference="aGR-FL-zCY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4xV-rL-F5p"/>
+                                        <include reference="1Os-Hd-hMy"/>
+                                        <include reference="aGR-FL-zCY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A8r-xA-m34" appends="YES" id="TZf-U6-h6T"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch and hold over the video to record." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9A-mP-ycb">
+                                <rect key="frame" x="21" y="491" width="478" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="678" id="bGe-6i-Nmk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bGe-6i-Nmk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="bGe-6i-Nmk"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EQH-bo-W3L" firstAttribute="top" secondItem="AG7-dU-lm2" secondAttribute="bottom" id="JLV-3z-7P5"/>
+                            <constraint firstItem="EQH-bo-W3L" firstAttribute="leading" secondItem="hPB-3a-tr0" secondAttribute="leadingMargin" constant="4" id="X52-Wg-iC4"/>
+                            <constraint firstItem="w9A-mP-ycb" firstAttribute="leading" secondItem="hPB-3a-tr0" secondAttribute="leadingMargin" constant="-155" id="ZhW-rp-cx2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w9A-mP-ycb" secondAttribute="trailing" constant="-155" id="bVF-iS-WHO"/>
+                            <constraint firstItem="w9A-mP-ycb" firstAttribute="top" secondItem="EQH-bo-W3L" secondAttribute="bottom" constant="9" id="mPJ-7Z-7Bl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EQH-bo-W3L" secondAttribute="trailing" constant="4" id="vSU-05-Em3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="w9A-mP-ycb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="ZhW-rp-cx2"/>
+                                <exclude reference="bVF-iS-WHO"/>
+                                <exclude reference="mPJ-7Z-7Bl"/>
+                                <exclude reference="JLV-3z-7P5"/>
+                                <exclude reference="X52-Wg-iC4"/>
+                                <exclude reference="vSU-05-Em3"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="w9A-mP-ycb"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="ZhW-rp-cx2"/>
+                                <include reference="bVF-iS-WHO"/>
+                                <include reference="mPJ-7Z-7Bl"/>
+                                <include reference="JLV-3z-7P5"/>
+                                <include reference="X52-Wg-iC4"/>
+                                <include reference="vSU-05-Em3"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" id="0yT-2I-aAn"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="flipCameraButton" destination="PSa-Ol-wdi" id="Eta-b3-D9I"/>
+                        <outlet property="previewView" destination="EQH-bo-W3L" id="bsq-vR-D3m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Wa-PO-cjJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="A8r-xA-m34">
+                    <connections>
+                        <action selector="handleLongPressGestureRecognizer:" destination="Kbv-Xd-BcP" id="2lX-Ds-jch"/>
+                        <outlet property="delegate" destination="Kbv-Xd-BcP" id="IVc-8H-Nyg"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="874.5" y="18.75"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KK5-dg-I9a">
+            <objects>
+                <tabBarController id="e0r-QB-jiD" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9Ez-QW-vfh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Kbv-Xd-BcP" kind="relationship" relationship="viewControllers" id="N8b-cY-ulS"/>
+                        <segue destination="2jl-gY-lHl" kind="relationship" relationship="viewControllers" id="k3e-xO-dod"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ta3-Ge-0SK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-94.5" y="457.5"/>
+        </scene>
+        <!--Local Videos-->
+        <scene sceneID="DSy-yq-wBp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2jl-gY-lHl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Local Videos" id="6lO-fv-UVA"/>
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vET-g7-qf0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UnZ-dx-2b0" kind="relationship" relationship="rootViewController" id="RmZ-SL-QEF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erI-1b-7Kk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875" y="954"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Placeholder" width="64" height="64"/>
+    </resources>
+</document>
