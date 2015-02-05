@@ -61,7 +61,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-bo-W3L">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-bo-W3L">
                                 <rect key="frame" x="40" y="20" width="520" height="520"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSa-Ol-wdi">
@@ -111,11 +111,8 @@
                                         <include reference="aGR-FL-zCY"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="A8r-xA-m34" appends="YES" id="TZf-U6-h6T"/>
-                                </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch and hold over the video to record." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9A-mP-ycb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch and hold the screen to record." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9A-mP-ycb">
                                 <rect key="frame" x="21" y="491" width="478" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="678" id="bGe-6i-Nmk"/>
@@ -170,6 +167,9 @@
                                 <include reference="vSU-05-Em3"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="A8r-xA-m34" appends="YES" id="NKA-cn-rsg"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Camera" id="0yT-2I-aAn"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
